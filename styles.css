@@ -1,9 +1,149 @@
-:root {
-  --bg-color: #FFCD25;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  text-decoration: none;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Gramatika";
+  src: url("../fonts/Gramatika Demo Regular.otf") format("otf"), url("../fonts/GramatikaDemoRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gramatika Bold";
+  src: url("../fonts/Gramatika Demo Bold.otf") format("otf"), url("../fonts/GramatikaDemoBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+:root {
+  --bg-color: #FFCD25;
+  --bg-gradient: linear-gradient(to bottom, #FFCD25, #F5BC00);
+  --bg-line: #FFE942;
+  --text-color: #0F0F0F;
+  --text-main: "Helvetica", sans-serif;
+  --text-accent: "Gramatika Bold", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--text-main);
+  font-size: 2.1666666667vw;
+  color: var(--text-color);
   background-color: var(--bg-color);
+}
+
+.top__pre {
+  display: flex;
+  background: var(--bg-gradient);
+  overflow: hidden;
+  height: 33.3333333333vw;
+  border-bottom: 2px solid var(--bg-line);
+}
+@media screen and (max-width: 840px) {
+  .top__pre {
+    height: 41.6666666667vw;
+  }
+}
+
+.top__image {
+  position: relative;
+  top: 4.1666666667vw;
+  margin: 0 auto;
+  width: 70vw;
+  padding-top: 46.6666666667vw;
+}
+@media screen and (max-width: 840px) {
+  .top__image {
+    top: 8.3333333333vw;
+    width: 82.1428571429vw;
+    padding-top: 54.7619047619vw;
+  }
+}
+
+.top__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top__text {
+  margin: 9.1666666667vw auto 16.6666666667vw auto;
+  width: 70vw;
+}
+
+.top__birka {
+  text-align: center;
+  font-size: 1.8333333333vw;
+  line-height: 100%;
+  letter-spacing: 0.1375rem;
+  text-transform: uppercase;
+}
+
+.top__header {
+  margin: 0 auto;
+  width: 58.3333333333vw;
+  text-align: center;
+  font-family: var(--text-accent);
+  line-height: 110%;
+  font-size: 5.4166666667vw;
+  margin-top: 0.8333333333vw;
+  margin-bottom: 5vw;
+}
+
+.top__text {
+  text-align: center;
+  line-height: 150%;
 }
 
 /*# sourceMappingURL=styles.css.map */

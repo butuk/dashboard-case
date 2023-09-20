@@ -1,7 +1,62 @@
-:root {
-  --bg-color: #FFCD25;
+//Custom fonts
+@font-face {
+  font-family: 'Gramatika';
+  src:  url('../fonts/Gramatika Demo Regular.otf') format('otf'),
+  url('../fonts/GramatikaDemoRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gramatika Bold';
+  src:  url('../fonts/Gramatika Demo Bold.otf') format('otf'),
+  url('../fonts/GramatikaDemoBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
+:root {
+  --bg-color: #FFCD25;
+  --bg-gradient: linear-gradient(to bottom, #FFCD25, #F5BC00);
+  --bg-line: #FFE942;
+  --text-color: #0F0F0F;
+  --text-main: 'Helvetica', sans-serif;
+  --text-accent: 'Gramatika Bold', sans-serif;
+}
+
+//Screen sizes
+$desktop-width: 1200;
+$tablet-width: 840;
+$mobile-width: 480;
+
+//Screen sizes inn pixels
+@function px($width) {
+  @return $width + px;
+}
+
+//Any units
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+@function vw-d($num) {
+  @return strip-unit($num) / $desktop-width * 100vw;
+}
+@function vw-t($num) {
+  @return strip-unit($num) / $tablet-width * 100vw;
+}
+@function vw-m($num) {
+  @return strip-unit($num) / $mobile-width * 100vw;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+//Body
 body {
+  font-family: var(--text-main);
+  font-size: vw-d(26px);
+  color: var(--text-color);
   background-color: var(--bg-color);
 }
